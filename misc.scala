@@ -15,3 +15,11 @@ areaRect(10.23f, 8.4f)
 def isEvenNumber(number: Int): Boolean = {
     number % 2 == 0
 }
+
+// setting a default argument:
+def areaRect(l: Int, b: Int = 10): Int = {
+    l * b
+}
+
+areaRect(10)
+// => res3: Int = 100
