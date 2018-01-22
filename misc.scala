@@ -85,5 +85,13 @@ colors.get("red")
 colors.getOrElse("bla", "Key not found")
 // => res3: String = Key not found
 
+// TUPLES (they can hold elements of different data types + they are immutable)
+
+var t = (14, 45.69, "Australia")
+
+t._1
+// => res0: Int = 14 // index starts from 1 in tuples!
+
+
 
 
