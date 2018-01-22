@@ -36,3 +36,39 @@ arr
 
  val arr = new Array[String](3)
 //=> arr: Array[String] = Array(null, null, null)
+
+// ARRAY BUFFERS
+import scala.collection.mutable.ArrayBuffer
+val arr = new ArrayBuffer[Int]()
+// => arr: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer()
+arr += (300, 400, 500)
+// => res0: arr.type = ArrayBuffer(300, 400, 500)
+
+arr.foreach(println)
+
+arr ++= Array(600, 700, 800)
+// => res1: arr.type = ArrayBuffer(300, 400, 500, 600, 700, 800)
+
+arr --= Array(600, 800)
+// => res2: arr.type = ArrayBuffer(300, 400, 500, 700)
+
+//arr.trimEnd(2) // removes last 2 elements
+// arr.insert(2, 9) // adds element at 2nd index
+// arr.insert(2, 10, 11, 12) // adds a list ( // => res6: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer(300, 400, 10, 11, 12, 500))
+a.remove(2) // removes an element
+a.remove(2, 3) // removes 3 elements from index 2
+
+// printing out the odd numbers:
+for (n <- arr if n% 2 != 0) println(n)
+
+//collecting the odd numbers:
+for (n <- arr if n% 2 != 0) yield(n)
+// => res8: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer(11)
+
+//collecting the odd numbers with filter:
+arr.filter(_ % 2 != 0)
+// => res9: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer(11)
+
+arr.sum // sum of Array
+arr.max //the biggest number of the Array
+arr.mkString("**") // => res13: String = 300**400**10**11**12**500
