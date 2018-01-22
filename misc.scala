@@ -72,3 +72,18 @@ arr.filter(_ % 2 != 0)
 arr.sum // sum of Array
 arr.max //the biggest number of the Array
 arr.mkString("**") // => res13: String = 300**400**10**11**12**500
+
+//MAPS (they are unordered/unsorted)
+var colors = Map("red" -> "#FF0000", "yellow" -> "#FF000")
+
+colors("red")
+// => res1: String = #FF0000
+
+colors.get("red")
+// => res0: Option[String] = Some(#FF0000)
+
+colors.getOrElse("bla", "Key not found")
+// => res3: String = Key not found
+
+
+
