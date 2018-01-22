@@ -23,3 +23,16 @@ def areaRect(l: Int, b: Int = 10): Int = {
 
 areaRect(10)
 // => res3: Int = 100
+
+// ARRAYS
+val arr = new Array[Int](10)
+// => arr: Array[Int] = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+arr(0) = 100
+arr
+ / => res1: Array[Int] = Array(100, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+ arr.foreach(println)
+
+ val arr = new Array[String](3)
+//=> arr: Array[String] = Array(null, null, null)
